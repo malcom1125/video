@@ -1,0 +1,77 @@
+body {
+    background-color:#26B4BC;
+}
+.button {
+    inline-size: 32px;
+    block-size:32px;
+    border: none;
+    background-color: transparent;
+    background-repeat: none;
+    background-position: center;
+    cursor: pointer;
+}
+.button:active {
+    transform: scale(.9);
+}
+#play {
+    background-image: url("../images/play.svg");
+}
+#pause {
+    background-image: url("../images/pause.svg");
+}
+#backward {
+    background-image: url("../images/-10.svg");
+}
+#forward {
+    background-image: url("../images/+10.svg");
+}
+.wraaper {
+    max-inline-size: 900px;
+    margin: auto;
+}
+.player {
+    position: relative;
+    margin-block-start:100px;
+}
+.player video {
+    inline-size: 100%; 
+    z-index: 2;
+    aspect-ratio:16/9;   
+    vertical-align: middle;
+}
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    gap: 20px;
+    inset-block-start: 20px;
+    inset: 0;
+}
+.player-title {
+    color:white;
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-start:20px;
+    display:flex ;
+}
+.barra {
+    position: absolute;
+    inset-block-end: 0; 
+    inset-inline: 0;
+    padding: 10px;
+}
+.barra input{
+    inline-size: 100%;
+}
+
+.player-ovelay {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: .5s opacity;
+}
+
+.player:hover .player-ovelay{
+    opacity: 1;
+}
